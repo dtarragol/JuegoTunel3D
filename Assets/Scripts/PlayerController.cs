@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody rb;
     bool isGrounded=false;
 
+
     void Awake(){
         Physics.gravity = gravity;
         rb = GetComponent<Rigidbody>();

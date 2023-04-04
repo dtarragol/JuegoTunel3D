@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class EndlesScroll : MonoBehaviour
 {
@@ -9,18 +10,25 @@ public class EndlesScroll : MonoBehaviour
     public Vector3 gameVelocity;
     Rigidbody rb;
 
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.velocity = gameVelocity * scrollFactor;
     }
-
+    
+    
     void OnTriggerExit(Collider gameArea){
         transform.position += Vector3.forward * (gameArea.bounds.size.z + GetComponent<BoxCollider>().size.z);
 
     }
-    void OnCollisionEnter(Collision other){
+
+    void OnCollisionEnter(Collision collision)
+    {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+
+
 }

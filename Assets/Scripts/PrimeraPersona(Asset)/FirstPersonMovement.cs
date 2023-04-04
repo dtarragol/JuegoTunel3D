@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class FirstPersonMovement : MonoBehaviour
 {
@@ -10,6 +12,10 @@ public class FirstPersonMovement : MonoBehaviour
     public bool IsRunning { get; private set; }
     public float runSpeed = 9;
     public KeyCode runningKey = KeyCode.LeftShift;
+
+    /*public Image barraDeVida;
+    public float vidaActual;
+    public float vidaMaxima;*/
 
     Rigidbody rigidbody;
     /// <summary> Functions to override movement speed. Will use the last added override. </summary>
@@ -22,6 +28,7 @@ public class FirstPersonMovement : MonoBehaviour
         // Get the rigidbody on this.
         rigidbody = GetComponent<Rigidbody>();
     }
+    
 
     void FixedUpdate()
     {
@@ -41,4 +48,20 @@ public class FirstPersonMovement : MonoBehaviour
         // Apply movement.
         rigidbody.velocity = transform.rotation * new Vector3(targetVelocity.x, rigidbody.velocity.y, targetVelocity.y);
     }
+    /*public void ReiniciarEscena()
+    {
+        
+        vidaActual -= 25;
+        barraDeVida.fillAmount = vidaActual / vidaMaxima;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+    }
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            ReiniciarEscena();
+        }
+    }*/
+
 }
