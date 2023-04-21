@@ -24,7 +24,12 @@ public class DatosJugador : MonoBehaviour
         if(vidaPlayer <=0)
         {
             Debug.Log("GAME OVER");
-            Destroy(gameObject);
+            Time.timeScale = 0f;
+            GameOverManager.gameOverManager.CallGameOver();
+        }
+        else
+        {
+            Time.timeScale = 1f;
         }
     }
 }
