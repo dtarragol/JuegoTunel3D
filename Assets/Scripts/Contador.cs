@@ -24,7 +24,7 @@ public class Contador : MonoBehaviour
         if (timeLeft <= 0)
         {
             timeLeft = 0;
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("Lobby");
         }
 
         tiempoText.text = "Tiempo restante: " + Mathf.RoundToInt(timeLeft);
