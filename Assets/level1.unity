@@ -835,7 +835,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6705839303017378442, guid: 77a37ab0aa4bfc94fa574470dc3926ca, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -22.497555
+      value: -22.3
       objectReference: {fileID: 0}
     - target: {fileID: 6705839303017378442, guid: 77a37ab0aa4bfc94fa574470dc3926ca, type: 3}
       propertyPath: m_LocalPosition.z
@@ -869,7 +869,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2031214603, guid: 77a37ab0aa4bfc94fa574470dc3926ca, type: 3}
+    - {fileID: 2031214604, guid: 77a37ab0aa4bfc94fa574470dc3926ca, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 77a37ab0aa4bfc94fa574470dc3926ca, type: 3}
 --- !u!4 &608921225 stripped
 Transform:
@@ -1069,6 +1071,43 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1157498004 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6702012849951239414, guid: 77a37ab0aa4bfc94fa574470dc3926ca, type: 3}
+  m_PrefabInstance: {fileID: 608921224}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1157498005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157498004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70b5c27d0f422044a13be1da78dc555, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 6
+  Player: {fileID: 1866014013}
+--- !u!114 &1157498006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157498004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a540cf9d8477bd246b77ea886e8e4f5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rangoDeAlerta: 10
+  capaDelJugador:
+    serializedVersion: 2
+    m_Bits: 64
+  Jugador: {fileID: 1866014016}
+  velocidad: 4
 --- !u!1 &1178226494
 GameObject:
   m_ObjectHideFlags: 0
@@ -1394,7 +1433,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5709553526550735154, guid: 03ca9f78abac8f4428a445e135f4b3a3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -21.8
+      value: -22.54
       objectReference: {fileID: 0}
     - target: {fileID: 5709553526550735154, guid: 03ca9f78abac8f4428a445e135f4b3a3, type: 3}
       propertyPath: m_LocalPosition.z
