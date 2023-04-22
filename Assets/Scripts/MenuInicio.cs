@@ -36,11 +36,10 @@ public class MenuInicio : MonoBehaviour
     {
         SceneManager.LoadScene("Segurridad");
         Time.timeScale = 1;
-        camara.GetComponent<FirstPersonLook>().enabled = true;
-        audio.GetComponent<FirstPersonAudio>().enabled = true;
     }
     public void JuegoTunelTerror()
     {
         SceneManager.LoadScene("SampleScene");
+        Time.timeScale = 1;
     }
 }
