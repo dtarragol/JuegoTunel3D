@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 public class MenuPausa : MonoBehaviour
 {
     [SerializeField] private GameObject botonPausa;
-    [SerializeField] private GameObject menuPausa;
+    [SerializeField] private GameObject menuPausaOLobby;
+    [SerializeField] private GameObject menuLobby;
+
     private bool juegoPausado = false;
     private void Update()
     {
@@ -14,12 +16,29 @@ public class MenuPausa : MonoBehaviour
         {
             if (juegoPausado)
             {
+                if (menuLobby.activeSelf)
+                {
+                    menuLobby.SetActive(false);
+                }
                 Reanudar();
             }
             else
             {
+                if (!menuLobby.activeSelf)
+                {
+                    menuLobby.SetActive(true);
+                }
                 Pausa();
             }
+        }
+        if(menuLobby.activeSelf) 
+        {
+            botonPausa.SetActive(false);
+            juegoPausado = true;
+        }
+        else
+        {
+            botonPausa.SetActive(true);
         }
     }
 
@@ -28,7 +47,7 @@ public class MenuPausa : MonoBehaviour
         juegoPausado = true;
         Time.timeScale = 0f;
         botonPausa.SetActive(false);
-        menuPausa.SetActive(true);
+        menuPausaOLobby.SetActive(true);
     }
 
     public void Reanudar()
@@ -36,7 +55,7 @@ public class MenuPausa : MonoBehaviour
         juegoPausado = false;
         Time.timeScale = 1f;
         botonPausa.SetActive(true);
-        menuPausa.SetActive(false);
+        menuPausaOLobby.SetActive(false);
 
     }
     public void Reiniciar()
