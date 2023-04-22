@@ -13,6 +13,11 @@ public class MenuInicio : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        Cursor.visible = true; // hacer visible el cursor
+        Cursor.lockState = CursorLockMode.None; // desbloquear el cursor
+
+
         Time.timeScale = 0;
         menu.SetActive(true);
         camara.GetComponent<FirstPersonLook>().enabled = false;
