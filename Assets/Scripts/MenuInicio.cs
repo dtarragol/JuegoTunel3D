@@ -35,6 +35,9 @@ public class MenuInicio : MonoBehaviour
     public void JuegoMazmorra()
     {
         SceneManager.LoadScene("Segurridad");
+        Time.timeScale = 1;
+        camara.GetComponent<FirstPersonLook>().enabled = true;
+        audio.GetComponent<FirstPersonAudio>().enabled = true;
     }
     public void JuegoTunelTerror()
     {
