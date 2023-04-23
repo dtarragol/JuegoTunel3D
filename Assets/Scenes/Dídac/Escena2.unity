@@ -2714,6 +2714,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98ed34ca7030e2046b76d3376c181127, type: 3}
+--- !u!1 &1178310321 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3676322786901205127, guid: 98ed34ca7030e2046b76d3376c181127, type: 3}
+  m_PrefabInstance: {fileID: 1178310320}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1231784954 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8900838258180151802, guid: 5a31141e6696d45ab926369601cca605, type: 3}
@@ -4415,6 +4420,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8134767850059258930, guid: ccf5b7800a8c249499e3c229246aaa46, type: 3}
+      propertyPath: audio
+      value: 
+      objectReference: {fileID: 1628173945}
+    - target: {fileID: 8134767850059258930, guid: ccf5b7800a8c249499e3c229246aaa46, type: 3}
+      propertyPath: camara
+      value: 
+      objectReference: {fileID: 1178310321}
     - target: {fileID: 8134767850059258930, guid: ccf5b7800a8c249499e3c229246aaa46, type: 3}
       propertyPath: menuLobby
       value: 

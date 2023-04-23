@@ -12899,6 +12899,14 @@ PrefabInstance:
       value: Pause 1
       objectReference: {fileID: 0}
     - target: {fileID: 8134767850059258930, guid: ccf5b7800a8c249499e3c229246aaa46, type: 3}
+      propertyPath: audio
+      value: 
+      objectReference: {fileID: 239821809}
+    - target: {fileID: 8134767850059258930, guid: ccf5b7800a8c249499e3c229246aaa46, type: 3}
+      propertyPath: camara
+      value: 
+      objectReference: {fileID: 957232280}
+    - target: {fileID: 8134767850059258930, guid: ccf5b7800a8c249499e3c229246aaa46, type: 3}
       propertyPath: menuLobby
       value: 
       objectReference: {fileID: 1407156515}

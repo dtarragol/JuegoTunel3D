@@ -8,6 +8,8 @@ public class MenuPausa : MonoBehaviour
     [SerializeField] private GameObject botonPausa;
     [SerializeField] private GameObject menuPausaOLobby;
     [SerializeField] private GameObject menuLobby;
+    [SerializeField] private GameObject camara;
+    [SerializeField] private GameObject audio;
 
     private bool juegoPausado = false;
     private void Update()
@@ -48,6 +50,12 @@ public class MenuPausa : MonoBehaviour
         Time.timeScale = 0f;
         botonPausa.SetActive(false);
         menuPausaOLobby.SetActive(true);
+
+        Cursor.visible = true; // hacer visible el cursor
+        Cursor.lockState = CursorLockMode.None; // desbloquear el cursor
+        camara.GetComponent<FirstPersonLook>().enabled = false;
+        audio.GetComponent<FirstPersonAudio>().enabled = false;
+
     }
 
     public void Reanudar()
@@ -57,6 +65,8 @@ public class MenuPausa : MonoBehaviour
         botonPausa.SetActive(true);
         menuPausaOLobby.SetActive(false);
 
+        camara.GetComponent<FirstPersonLook>().enabled = true;
+        audio.GetComponent<FirstPersonAudio>().enabled = true;
     }
     public void Reiniciar()
     {
