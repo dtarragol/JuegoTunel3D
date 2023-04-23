@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
@@ -41,5 +42,19 @@ public class MenuInicio : MonoBehaviour
     {
         SceneManager.LoadScene("SampleScene");
         Time.timeScale = 1;
+    }
+    public void Juego3()
+    {
+        SceneManager.LoadScene("Level1");
+        Time.timeScale = 1;
+    }
+    public void Juego4()
+    {
+        SceneManager.LoadScene("SampleScene");
+        Time.timeScale = 1;
+    }
+    public void SalirJuego() 
+    {
+        Application.Quit();
     }
 }
