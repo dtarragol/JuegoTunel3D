@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Enemy
   - Enemigo
+  - Portal Ignore
+  - Trap
+  - FakeBlock
   layers:
   - Default
   - TransparentFX
