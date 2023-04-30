@@ -37,10 +37,18 @@ public class Enemigo1 : MonoBehaviour
 
         if (estarAlerta == true)
         {
-
             Vector3 PosJugador = new Vector3(jugador.position.x, transform.position.y, jugador.position.z);
             transform.LookAt(PosJugador);
             transform.position = Vector3.MoveTowards(transform.position, PosJugador, velocidad * Time.deltaTime);
+        }
+
+        if (ani.GetCurrentAnimatorStateInfo(0).IsName("walk") && !GetComponent<AudioSource>().isPlaying)
+        {
+            GetComponent<AudioSource>().Play(); // Reproducir el audio si la animación de caminar se está reproduciendo y el audio no se está reproduciendo actualmente
+        }
+        else if (!ani.GetCurrentAnimatorStateInfo(0).IsName("walk"))
+        {
+            GetComponent<AudioSource>().Stop(); // Detener el audio si la animación de caminar no se está reproduciendo
         }
     }
 
