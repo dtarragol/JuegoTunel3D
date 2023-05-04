@@ -133,31 +133,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1403246217210496613, guid: dfe66258c7a0c5f4fa578f18b34dd00d, type: 3}
   m_PrefabInstance: {fileID: 883324924}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &27153490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 27153485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9630e253f5c5fb04380f71409d704682, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  menu: {fileID: 0}
-  showButton:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Show Button
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 5ef87b4b-bd27-4f21-9527-e7ef73bc51ae
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
 --- !u!1 &66171998 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4292875299958353417, guid: 00d1e2d8dea1cb84d99609e31932d17a, type: 3}
@@ -212,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objetoActivar: {fileID: 1206139353}
   objetoARotar: {fileID: 847019956}
-  rotacionY: 170
+  rotacionY: 250
   clipMusicaMenu: {fileID: 8300000, guid: 14a1cf915de1c2448b200ab123c01445, type: 3}
   clipMusicaAmbiente: {fileID: 8300000, guid: d9e280ca0b9d3ad4f83da6d4defd2c91, type: 3}
 --- !u!1001 &198441385
@@ -1543,11 +1518,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1403246216050548410, guid: dfe66258c7a0c5f4fa578f18b34dd00d, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1403246216050548410, guid: dfe66258c7a0c5f4fa578f18b34dd00d, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1403246216418640277, guid: dfe66258c7a0c5f4fa578f18b34dd00d, type: 3}
       propertyPath: canvasOpciones
@@ -1681,17 +1656,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Opciones y pausa
       objectReference: {fileID: 0}
+    - target: {fileID: 1403246217210496633, guid: dfe66258c7a0c5f4fa578f18b34dd00d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1403246217293078024, guid: dfe66258c7a0c5f4fa578f18b34dd00d, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1403246217293078024, guid: dfe66258c7a0c5f4fa578f18b34dd00d, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1403246217293078024, guid: dfe66258c7a0c5f4fa578f18b34dd00d, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1403246217328760108, guid: dfe66258c7a0c5f4fa578f18b34dd00d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2412,7 +2391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menu: {fileID: 27153485}
   showButton:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
       m_Name: Show Button
       m_Type: 0
@@ -2422,7 +2401,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: 8522166548713388685, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!1 &1056119216
 GameObject:
   m_ObjectHideFlags: 0

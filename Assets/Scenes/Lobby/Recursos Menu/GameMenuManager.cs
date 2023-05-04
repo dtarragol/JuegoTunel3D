@@ -8,19 +8,31 @@ public class GameMenuManager : MonoBehaviour
 
     public GameObject menu;
     public InputActionProperty showButton;
-    // Start is called before the first frame update
+
+    // Añade una variable privada para guardar el estado anterior del timeScale
+    private float previousTimeScale = 1f;
+
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if(showButton.action.WasPressedThisFrame())
+        if (showButton.action.WasPressedThisFrame())
         {
             menu.SetActive(!menu.activeSelf);
 
+            // Si el menú está activado, pausa el juego
+            if (menu.activeSelf)
+            {
+                previousTimeScale = Time.timeScale;
+                Time.timeScale = 0f;
+            }
+            else // Si el menú está desactivado, reanuda el juego
+            {
+                Time.timeScale = previousTimeScale;
+            }
         }
     }
 }
