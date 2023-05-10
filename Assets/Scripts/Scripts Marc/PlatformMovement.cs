@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class PlatformMovement : MonoBehaviour
 {
 	public GameObject[] waypoints;
 
@@ -30,5 +30,21 @@ public class NewBehaviourScript : MonoBehaviour
 		}
 
 		transform.position = Vector3.MoveTowards(transform.position, waypoints[waypointsIndex].transform.position, platformSpeed * Time.deltaTime);
+	}
+
+	private void OnCollisionEnter(Collision collision)
+	{
+		if (collision.gameObject.CompareTag("Player"))
+		{
+			collision.gameObject.transform.SetParent(transform);
+		}
+	}
+
+	private void OnCollisionExit(Collision collision)
+	{
+		if (collision.gameObject.CompareTag("Player"))
+		{
+			collision.gameObject.transform.SetParent(null);
+		}
 	}
 }
