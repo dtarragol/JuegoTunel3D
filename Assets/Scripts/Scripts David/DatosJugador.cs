@@ -6,8 +6,9 @@ using UnityEngine.UI;
 public class DatosJugador : MonoBehaviour
 {
    public int vidaPlayer;
-   public Slider vidaVisual; 
-
+   public Slider vidaVisual;
+    public GameObject objetoactivar;
+    public GameObject objetodesactivar;
 
    /*private void OnTriggerEnter(Collider other)
     {
@@ -24,7 +25,9 @@ public class DatosJugador : MonoBehaviour
         if(vidaPlayer <=0)
         {
             Time.timeScale = 0f;
-            GameOverManager.gameOverManager.CallGameOver();
+            objetoactivar.SetActive(true);
+            objetodesactivar.SetActive(false);
+            //GameOverManager.gameOverManager.CallGameOver();
         }
         else
         {
