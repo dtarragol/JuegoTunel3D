@@ -7,7 +7,7 @@ public class IrAEscena0 : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         GameManager.ActivateOso();
         }
     }
