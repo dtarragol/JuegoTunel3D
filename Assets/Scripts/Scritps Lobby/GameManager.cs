@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject oso;
+    
 
 	public Vector3 respawnPosition;
 
@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
 
 	public static void ActivateOso()
     {
-        instance.oso.SetActive(true);
+        
     }
 	void Update()
 	{
